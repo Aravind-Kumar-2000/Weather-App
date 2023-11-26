@@ -11,7 +11,12 @@ async function checkWeather(city) {
   if (response.status == 404) {
     document.querySelector(".error").style.display = "block";
     document.querySelector(".weather").style.display = "none";
-  } else {
+    document.querySelector(".notification").style.display = "none";
+  } else if(searchBox.value == ""){
+    document.querySelector(".notification").style.display = "block";
+    document.querySelector(".error").style.display = "none";
+    document.querySelector(".weather").style.display = "none";
+  }else {
     const data = await response.json();
     console.log(data);
 
@@ -38,6 +43,7 @@ async function checkWeather(city) {
 
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
+    document.querySelector(".notification").style.display = "none";
   }
 }
 
