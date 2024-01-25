@@ -1,0 +1,2 @@
+(i) Kairos, a Weather website, completed by using HTML, CSS & JavaScript.
+(ii) It is purely a Front end project.
